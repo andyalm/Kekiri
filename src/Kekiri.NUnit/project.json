@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "Kekiri.Core": "",
+        "NUnit": "2.6.4"
+    },
+    "frameworks": {
+        "dnx452": {}
+    }
+}

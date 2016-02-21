@@ -1,0 +1,85 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    "DNX,Version=v4.5.2": {
+      "Kekiri.Core/4.0.0-beta1": {
+        "type": "project",
+        "framework": "DNX,Version=v4.5.2",
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ]
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.2/win7-x86": {
+      "Kekiri.Core/4.0.0-beta1": {
+        "type": "project",
+        "framework": "DNX,Version=v4.5.2",
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ]
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.2/win7-x64": {
+      "Kekiri.Core/4.0.0-beta1": {
+        "type": "project",
+        "framework": "DNX,Version=v4.5.2",
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ]
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kekiri.Core/4.0.0-beta1": {
+      "type": "project",
+      "path": "../Kekiri.Core/project.json"
+    },
+    "NUnit/2.6.4": {
+      "type": "package",
+      "sha512": "cmSPvaCMRSP0DI19FP1Liw9DyJY3E/vOY1OrVaeJBZpZFWHkmT3fB9ngGWnZX/ftvA7zJEbghEaw3Yd+u4YFAw==",
+      "files": [
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "license.txt",
+        "NUnit.2.6.4.nupkg",
+        "NUnit.2.6.4.nupkg.sha512",
+        "NUnit.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "Kekiri.Core ",
+      "NUnit >= 2.6.4"
+    ],
+    "DNX,Version=v4.5.2": []
+  }
+}
