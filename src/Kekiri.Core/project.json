@@ -1,10 +1,19 @@
 {
-   "version": "4.0.0-beta1",
-   "frameworks": {
-      "dnx452": {
-          "frameworkAssemblies": {
-              "System.Configuration": ""
-          }
+  "version": "4.0.0-beta1",
+  "description": "A .NET framework that supports writing low-ceremony BDD tests using Gherkin language",
+  "authors": ["Chris Peterson"],
+  "frameworks": {
+    "net452": {},
+    "netcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.0",
+        "System.Runtime": "4.0.20",
+        "System.Linq": "4.0.0",
+        "System.Text.RegularExpressions": "4.0.10",
+        "System.IO.FileSystem": "4.0.0",
+        "System.Dynamic.Runtime": "4.0.10",
+        "System.Reflection": "4.0.10"
       }
-   }
+    }
+  }
 }

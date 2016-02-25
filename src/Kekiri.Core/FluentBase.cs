@@ -66,19 +66,19 @@ namespace Kekiri
 
             public FluentOptionsForStepWithNesting And<T>(Action<T> action, T a)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a);
                 return this;
             }
 
             public FluentOptionsForStepWithNesting And<T1, T2>(Action<T1, T2> action, T1 a, T2 b)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a, b);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a, b);
                 return this;
             }
 
             public FluentOptionsForStepWithNesting And<T1, T2, T3>(Action<T1, T2, T3> action, T1 a, T2 b, T3 c)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a, b, c);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a, b, c);
                 return this;
             }
 
@@ -98,19 +98,19 @@ namespace Kekiri
 
             public FluentOptionsForStepWithNesting But<T>(Action<T> action, T a)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a);
                 return this;
             }
 
             public FluentOptionsForStepWithNesting But<T1, T2>(Action<T1, T2> action, T1 a, T2 b)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a, b);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a, b);
                 return this;
             }
 
             public FluentOptionsForStepWithNesting But<T1, T2, T3>(Action<T1, T2, T3> action, T1 a, T2 b, T3 c)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a, b, c);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a, b, c);
                 return this;
             }
 
@@ -189,19 +189,19 @@ namespace Kekiri
 
             internal FluentOptionsForWhen That<T>(Action<T> action, T a)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a);
                 return this;
             }
 
             internal FluentOptionsForWhen That<T1, T2>(Action<T1, T2> action, T1 a, T2 b)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a, b);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a, b);
                 return this;
             }
 
             internal FluentOptionsForWhen That<T1, T2, T3>(Action<T1, T2, T3> action, T1 a, T2 b, T3 c)
             {
-                Scenario.AddStepMethod(StepType, action.Method, a, b, c);
+                Scenario.AddStepMethod(StepType, action.GetMethodInfo(), a, b, c);
                 return this;
             }
 
@@ -280,7 +280,7 @@ namespace Kekiri
 
         private void AddStepMethod(StepType stepType, Action action)
         {
-            _scenarioRunner.AddStep(new StepMethodInvoker(stepType, action.Method));
+            _scenarioRunner.AddStep(new StepMethodInvoker(stepType, action.GetMethodInfo()));
         }
 
         private void AddStepMethod(StepType stepType, MethodInfo method, params object[] parameterValues)
@@ -301,7 +301,7 @@ namespace Kekiri
                     parameterValues.Select(p => string.Format("{0} {1}", p.GetType().Name, p)))));
             }
             var parameters = ExtractParameters(ctor, parameterValues);
-            _scenarioRunner.AddStep(new StepClassInvoker(stepType, stepClass, parameters, _scenarioRunner));
+            _scenarioRunner.AddStep(new StepClassInvoker(stepType, stepClass.GetTypeInfo(), parameters, _scenarioRunner));
         }
 
         private KeyValuePair<string, object>[] ExtractParameters(MethodBase method, object[] parameterValues)

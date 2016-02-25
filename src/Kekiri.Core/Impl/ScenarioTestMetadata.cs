@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Reflection;
 using Kekiri.Config;
 using Kekiri.Reporting;
 
@@ -122,7 +123,7 @@ namespace Kekiri.Impl
 
         private IEnumerable<T> ExtractAttributesFromScenarioTest<T>() where T : class
         {
-            return _scenarioTestType.GetCustomAttributes(
+            return _scenarioTestType.GetTypeInfo().GetCustomAttributes(
                 typeof(T), true) as IEnumerable<T>;
         }
 
@@ -179,7 +180,7 @@ namespace Kekiri.Impl
                 return null;
             }
 
-            if (stepName.StartsWith(prefix, StringComparison.InvariantCultureIgnoreCase))
+            if (stepName.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
             {
                 if (stepName.Length == prefix.Length)
                 {

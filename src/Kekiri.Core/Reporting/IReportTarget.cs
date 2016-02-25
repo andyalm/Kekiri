@@ -65,7 +65,7 @@ namespace Kekiri.Reporting
             var featureName = scenario.FeatureReport.Name;
             if (_featureState.ContainsKey(featureName))
             {
-                using (var fs = File.Open(_featureState[featureName].Path, FileMode.Append, FileAccess.Write))
+                using (var fs = File.Open((string)_featureState[featureName].Path, FileMode.Append, FileAccess.Write))
                 {
                     using (var writer = new StreamWriter(fs))
                     {
@@ -79,7 +79,7 @@ namespace Kekiri.Reporting
                 {
                     Path = string.Format("{0}.feature", CoerceValidFileName(featureName))
                 });
-                using (var fs = File.Create(_featureState[featureName].Path))
+                using (var fs = File.Create((string)_featureState[featureName].Path))
                 {
                     using (var writer = new StreamWriter(fs))
                     {
@@ -128,7 +128,7 @@ namespace Kekiri.Reporting
 
         public void Report(ScenarioReportingContext scenario)
         {
-            Trace.WriteLine(scenario.CreateReport());
+            Debug.WriteLine(scenario.CreateReport());
         }
     }
 }

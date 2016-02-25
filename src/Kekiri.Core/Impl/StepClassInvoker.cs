@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Kekiri.Impl
 {
     internal class StepClassInvoker : IStepInvoker
     {
-        private readonly Type _stepClass;
+        private readonly TypeInfo _stepClass;
         private readonly IExceptionHandler _exceptionHandler;
 
-        public StepClassInvoker(StepType stepType, Type stepClass, KeyValuePair<string,object>[] supportedParameters, IExceptionHandler exceptionHandler)
+        public StepClassInvoker(StepType stepType, TypeInfo stepClass, KeyValuePair<string,object>[] supportedParameters, IExceptionHandler exceptionHandler)
         {
-            if (!typeof(Step).IsAssignableFrom(stepClass))
+            if (!typeof(Step).GetTypeInfo().IsAssignableFrom(stepClass))
                 throw new ArgumentException("The stepClass must inherit from Step", "stepClass");
             _stepClass = stepClass;
             _exceptionHandler = exceptionHandler;
             Type = stepType;
             Name = new StepName(Type, _stepClass.Name, supportedParameters);
-            Parameters = _stepClass.GetConstructors().Single().BindParameters(supportedParameters);
+            Parameters = _stepClass.AsType().GetConstructors().Single().BindParameters(supportedParameters);
         }
 
         public StepType Type { get; private set; }

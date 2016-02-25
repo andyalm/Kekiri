@@ -18,9 +18,14 @@ namespace Kekiri.Impl
             return member.GetCustomAttributes(typeof (TAttribute), false).Any();
         }
 
+        public static bool HasAttribute<TAttribute>(this Type type) where TAttribute : class
+        {
+            return type.GetTypeInfo().GetCustomAttributes(typeof(TAttribute), false).Any();
+        }
+
         public static TAttribute AttributeOrDefault<TAttribute>(this Type type) where TAttribute : class
         {
-            return type.GetCustomAttributes(typeof(TAttribute), true)
+            return type.GetTypeInfo().GetCustomAttributes(typeof(TAttribute), true)
                 .SingleOrDefault() as TAttribute;
         }
 

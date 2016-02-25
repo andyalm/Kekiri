@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Kekiri.IoC
 {
@@ -26,19 +27,19 @@ namespace Kekiri.IoC
             }
 
             // check for Moq -- we don't want to take on a dependency so we use reflection
-            var type = instance.GetType();
+            var type = instance.GetType().GetTypeInfo();
             while (type != null)
             {
                 if (type.Name == "Mock")
                 {
-                    var objectProperty = type.GetProperty("Object");
+                    var objectProperty = type.AsType().GetProperty("Object");
                     if (objectProperty != null)
                     {
                         instance = objectProperty.GetValue(instance, null);
                         break;
                     }
                 }
-                type = type.BaseType;
+                type = type.BaseType.GetTypeInfo();
             }
 
             _fakes.Add(instance);

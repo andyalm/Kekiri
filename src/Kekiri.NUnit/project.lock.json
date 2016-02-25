@@ -5,10 +5,7 @@
     "DNX,Version=v4.5.2": {
       "Kekiri.Core/4.0.0-beta1": {
         "type": "project",
-        "framework": "DNX,Version=v4.5.2",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
+        "framework": ".NETFramework,Version=v4.5.2"
       },
       "NUnit/2.6.4": {
         "type": "package",
@@ -23,10 +20,7 @@
     "DNX,Version=v4.5.2/win7-x86": {
       "Kekiri.Core/4.0.0-beta1": {
         "type": "project",
-        "framework": "DNX,Version=v4.5.2",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
+        "framework": ".NETFramework,Version=v4.5.2"
       },
       "NUnit/2.6.4": {
         "type": "package",
@@ -41,10 +35,7 @@
     "DNX,Version=v4.5.2/win7-x64": {
       "Kekiri.Core/4.0.0-beta1": {
         "type": "project",
-        "framework": "DNX,Version=v4.5.2",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
+        "framework": ".NETFramework,Version=v4.5.2"
       },
       "NUnit/2.6.4": {
         "type": "package",
