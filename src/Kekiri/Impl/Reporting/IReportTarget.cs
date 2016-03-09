@@ -120,7 +120,7 @@ namespace Kekiri.Impl.Reporting
 
         public void Report(ScenarioReportingContext scenario)
         {
-            Trace.WriteLine(scenario.CreateReport());
+            Debug.WriteLine(scenario.CreateReport());
         }
     }
 }

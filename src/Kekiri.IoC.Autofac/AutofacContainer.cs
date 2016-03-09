@@ -15,7 +15,7 @@ namespace Kekiri.IoC.Autofac
         {
             var assemblies = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll")
                 .Where(n => !CustomBehavior.IsBlacklistedAssembly(n))
-                .Select(Assembly.LoadFrom)
+                .Select(AssemblyLoader.LoadFromFile)
                 .ToArray();
 
             if (CustomBehavior.BuildContainer == null)

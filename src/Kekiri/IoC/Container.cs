@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Kekiri.IoC
 {
@@ -35,7 +36,7 @@ namespace Kekiri.IoC
                         break;
                     }
                 }
-                type = type.BaseType;
+                type = type.GetTypeInfo().BaseType;
             }
 
             _fakes.Add(instance);

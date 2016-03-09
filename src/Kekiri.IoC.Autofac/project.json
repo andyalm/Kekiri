@@ -1,0 +1,20 @@
+{
+    "version": "4.0.0-alpha1",
+    "dependencies": {
+        "Kekiri": ""
+    },
+    "frameworks": {
+        "netcore50": {
+            "dependencies": {
+                "Microsoft.CSharp": "4.0.0",
+                "System.Runtime": "4.1.0-rc3-*",
+                "Autofac": "4.0.0-rc1-*"  
+            }
+        },
+        "net452": {
+            "dependencies": {
+                "Autofac": "2.6.3.862"
+            }
+        }
+    }
+}

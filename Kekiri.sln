@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9855DC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{DF16D56E-1B85-4B64-A128-C24EED22E633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kekiri.IoC.Autofac", "src\IoC\Autofac\Kekiri.IoC.Autofac.csproj", "{3501637A-ABF5-4F80-BC0E-7B4A8ACD3CC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kekiri.IoC.Autofac", "src\Kekiri.IoC.Autofac\Kekiri.IoC.Autofac.csproj", "{3501637A-ABF5-4F80-BC0E-7B4A8ACD3CC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kekiri", "src\Library\Kekiri.csproj", "{5827C04B-91A2-42AC-8A99-E23BBB27CD94}"
 EndProject

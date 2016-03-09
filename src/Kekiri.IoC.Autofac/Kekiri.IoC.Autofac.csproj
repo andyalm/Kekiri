@@ -57,7 +57,6 @@
   <ItemGroup>
     <None Include="Kekiri.IoC.Autofac.nuspec" />
     <None Include="NuGet\Content\IocBootstrapper.cs.pp" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Kekiri.Impl
 {
@@ -11,7 +12,7 @@ namespace Kekiri.Impl
 
         public StepClassInvoker(StepType stepType, Type stepClass, KeyValuePair<string,object>[] supportedParameters, IExceptionHandler exceptionHandler)
         {
-            if (!typeof(Step).IsAssignableFrom(stepClass))
+            if (!typeof(Step).GetTypeInfo().IsAssignableFrom(stepClass.GetTypeInfo()))
                 throw new ArgumentException("The stepClass must inherit from Step", nameof(stepClass));
             _stepClass = stepClass;
             _exceptionHandler = exceptionHandler;
