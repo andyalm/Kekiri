@@ -1,9 +1,11 @@
 [Oo]bj/
 [Bb]in/
 Packages
+.idea/
 
 _ReSharper.*
 *crunch*
+*.iml
 
 *.user
 *.suo
