@@ -1,5 +1,5 @@
+using System;
 using System.Reflection;
-using System.Runtime.Loader;
 using System.IO;
 
 namespace Kekiri.IoC.Autofac
@@ -8,7 +8,23 @@ namespace Kekiri.IoC.Autofac
     {
         public static Assembly LoadFromFile(string path)
         {
-            return AssemblyLoadContext.Default.LoadFromAssemblyPath(path);
+#if NET452
+            return Assembly.LoadFrom(path);
+#else        
+            return System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromAssemblyPath(path);
+#endif
+        }
+        
+        public static string BaseDirectory
+        {
+            get
+            {
+#if NET452
+                return AppDomain.CurrentDomain.BaseDirectory;
+#else
+                return AppContext.BaseDirectory;
+#endif
+            }
         }
     }
 }

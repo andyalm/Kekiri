@@ -3,7 +3,8 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.5.2": {},
-    ".NETFramework,Version=v4.5.2/osx.10.11-x64": {},
+    ".NETFramework,Version=v4.5.2/win7-x64": {},
+    ".NETFramework,Version=v4.5.2/win7-x86": {},
     ".NETStandard,Version=v1.5": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",

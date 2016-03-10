@@ -17,11 +17,11 @@
     </Target>
 
     <Target Name="Build" DependsOnTargets="Restore">
-        <Exec WorkingDirectory="%(Project.Directory)" Command="dotnet build $(TargetFrameworkSwitch)"/>
+        <Exec WorkingDirectory="%(Project.RootDir)%(Project.Directory)" Command="dotnet build $(TargetFrameworkSwitch)"/>
     </Target>
 
     <Target Name="Package" DependsOnTargets="Restore">
-        <Exec WorkingDirectory="%(Project.Directory)" Command="dotnet pack $(TargetFrameworkSwitch)" Condition="'$(OS)' == 'Windows_NT'"/>
+        <Exec WorkingDirectory="%(Project.RootDir)%(Project.Directory)" Command="dotnet pack $(TargetFrameworkSwitch)" Condition="'$(OS)' == 'Windows_NT'"/>
         <Warning Text="Building NuGet package currently only supported on windows" Condition="'$(OS)' != 'Windows_NT'"/>
         <CallTarget Targets="Build" Condition="'$(OS)' != 'Windows_NT'"/>
     </Target>

@@ -19,7 +19,24 @@
         "framework": ".NETFramework,Version=v4.5.2"
       }
     },
-    ".NETFramework,Version=v4.5.2/osx.10.11-x64": {
+    ".NETFramework,Version=v4.5.2/win7-x64": {
+      "Autofac/2.6.3.862": {
+        "type": "package",
+        "compile": {
+          "lib/NET40/Autofac.Configuration.dll": {},
+          "lib/NET40/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/Autofac.Configuration.dll": {},
+          "lib/NET40/Autofac.dll": {}
+        }
+      },
+      "Kekiri/4.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2"
+      }
+    },
+    ".NETFramework,Version=v4.5.2/win7-x86": {
       "Autofac/2.6.3.862": {
         "type": "package",
         "compile": {

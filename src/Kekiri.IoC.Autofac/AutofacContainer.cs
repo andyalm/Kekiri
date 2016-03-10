@@ -13,7 +13,7 @@ namespace Kekiri.IoC.Autofac
 
         static readonly Lazy<IContainer> _container = new Lazy<IContainer>(() =>
         {
-            var assemblies = Directory.GetFiles(AppContext.BaseDirectory, "*.dll")
+            var assemblies = Directory.GetFiles(AssemblyLoader.BaseDirectory, "*.dll")
                 .Where(n => !CustomBehavior.IsBlacklistedAssembly(n))
                 .Select(AssemblyLoader.LoadFromFile)
                 .ToArray();
