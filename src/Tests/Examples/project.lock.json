@@ -14,27 +14,13 @@
           "lib/NET40/Autofac.dll": {}
         }
       },
-      "Kekiri/4.0.0-alpha1": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5.2",
-        "compile": {
-          "net452/Kekiri.dll": {}
-        },
-        "runtime": {
-          "net452/Kekiri.dll": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.5.2/win7-x64": {
-      "Autofac/2.6.3.862": {
+      "NUnit/2.6.4": {
         "type": "package",
         "compile": {
-          "lib/NET40/Autofac.Configuration.dll": {},
-          "lib/NET40/Autofac.dll": {}
+          "lib/nunit.framework.dll": {}
         },
         "runtime": {
-          "lib/NET40/Autofac.Configuration.dll": {},
-          "lib/NET40/Autofac.dll": {}
+          "lib/nunit.framework.dll": {}
         }
       },
       "Kekiri/4.0.0-alpha1": {
@@ -46,9 +32,37 @@
         "runtime": {
           "net452/Kekiri.dll": {}
         }
+      },
+      "Kekiri.IoC.Autofac/4.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2",
+        "dependencies": {
+          "Autofac": "2.6.3.862",
+          "Kekiri": "4.0.0"
+        },
+        "compile": {
+          "net452/Kekiri.IoC.Autofac.dll": {}
+        },
+        "runtime": {
+          "net452/Kekiri.IoC.Autofac.dll": {}
+        }
+      },
+      "Kekiri.TestRunner.NUnit/1.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2",
+        "dependencies": {
+          "Kekiri": "4.0.0",
+          "NUnit": "2.6.4"
+        },
+        "compile": {
+          "net452/Kekiri.TestRunner.NUnit.dll": {}
+        },
+        "runtime": {
+          "net452/Kekiri.TestRunner.NUnit.dll": {}
+        }
       }
     },
-    ".NETFramework,Version=v4.5.2/win7-x86": {
+    ".NETFramework,Version=v4.5.2/win": {
       "Autofac/2.6.3.862": {
         "type": "package",
         "compile": {
@@ -60,6 +74,15 @@
           "lib/NET40/Autofac.dll": {}
         }
       },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
       "Kekiri/4.0.0-alpha1": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5.2",
@@ -68,6 +91,34 @@
         },
         "runtime": {
           "net452/Kekiri.dll": {}
+        }
+      },
+      "Kekiri.IoC.Autofac/4.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2",
+        "dependencies": {
+          "Autofac": "2.6.3.862",
+          "Kekiri": "4.0.0"
+        },
+        "compile": {
+          "net452/Kekiri.IoC.Autofac.dll": {}
+        },
+        "runtime": {
+          "net452/Kekiri.IoC.Autofac.dll": {}
+        }
+      },
+      "Kekiri.TestRunner.NUnit/1.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2",
+        "dependencies": {
+          "Kekiri": "4.0.0",
+          "NUnit": "2.6.4"
+        },
+        "compile": {
+          "net452/Kekiri.TestRunner.NUnit.dll": {}
+        },
+        "runtime": {
+          "net452/Kekiri.TestRunner.NUnit.dll": {}
         }
       }
     },
@@ -207,6 +258,15 @@
           "System.Threading": "4.0.11-rc2-23811",
           "System.Threading.Tasks": "4.0.11-rc2-23811",
           "System.Threading.Timer": "4.0.1-rc2-23811"
+        }
+      },
+      "NUnit/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/dotnet/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/nunit.framework.dll": {}
         }
       },
       "System.AppContext/4.1.0-rc2-23811": {
@@ -646,6 +706,39 @@
         "runtime": {
           "netstandard1.5/Kekiri.dll": {}
         }
+      },
+      "Kekiri.IoC.Autofac/4.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.5",
+        "dependencies": {
+          "Autofac": "4.0.0-rc1",
+          "Kekiri": "4.0.0",
+          "Microsoft.CSharp": "4.0.0",
+          "NETStandard.Library": "1.0.0-rc2-23811",
+          "System.Runtime.Loader": "4.0.0-rc2"
+        },
+        "compile": {
+          "netstandard1.5/Kekiri.IoC.Autofac.dll": {}
+        },
+        "runtime": {
+          "netstandard1.5/Kekiri.IoC.Autofac.dll": {}
+        }
+      },
+      "Kekiri.TestRunner.NUnit/1.0.0-alpha1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.5",
+        "dependencies": {
+          "Kekiri": "4.0.0",
+          "Microsoft.CSharp": "4.0.0",
+          "NETStandard.Library": "1.0.0-rc2-23811",
+          "NUnit": "3.0.1"
+        },
+        "compile": {
+          "netstandard1.5/Kekiri.TestRunner.NUnit.dll": {}
+        },
+        "runtime": {
+          "netstandard1.5/Kekiri.TestRunner.NUnit.dll": {}
+        }
       }
     }
   },
@@ -850,6 +943,38 @@
         "NETStandard.Platform.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt"
+      ]
+    },
+    "NUnit/2.6.4": {
+      "sha512": "cmSPvaCMRSP0DI19FP1Liw9DyJY3E/vOY1OrVaeJBZpZFWHkmT3fB9ngGWnZX/ftvA7zJEbghEaw3Yd+u4YFAw==",
+      "type": "package",
+      "files": [
+        "NUnit.2.6.4.nupkg.sha512",
+        "NUnit.nuspec",
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "license.txt"
+      ]
+    },
+    "NUnit/3.0.1": {
+      "sha512": "Fhz2Flnzlb+HjVxTK+W3dNAb9FUIbGxUp/G6jTTL487lBxInaDOWigNGzWbj1Ipjb87ix77heBCzrsVhk8+X8w==",
+      "type": "package",
+      "files": [
+        "CHANGES.txt",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "NUnit.3.0.1.nupkg.sha512",
+        "NUnit.nuspec",
+        "lib/dotnet/nunit.framework.dll",
+        "lib/dotnet/nunit.framework.xml",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.xml",
+        "lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.dll",
+        "lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.xml"
       ]
     },
     "System.AppContext/4.1.0-rc2-23811": {
@@ -2712,22 +2837,30 @@
     },
     "Kekiri/4.0.0-alpha1": {
       "type": "project",
-      "path": "../Kekiri/project.json",
-      "msbuildProject": "../Kekiri/Kekiri.xproj"
+      "path": "../../Kekiri/project.json",
+      "msbuildProject": "../../Kekiri/Kekiri.xproj"
+    },
+    "Kekiri.IoC.Autofac/4.0.0-alpha1": {
+      "type": "project",
+      "path": "../../Kekiri.IoC.Autofac/project.json",
+      "msbuildProject": "../../Kekiri.IoC.Autofac/Kekiri.IoC.Autofac.xproj"
+    },
+    "Kekiri.TestRunner.NUnit/1.0.0-alpha1": {
+      "type": "project",
+      "path": "../../Kekiri.TestRunner.NUnit/project.json",
+      "msbuildProject": "../../Kekiri.TestRunner.NUnit/Kekiri.TestRunner.NUnit.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
-      "Kekiri >= 4.0.0-*"
+      "Kekiri >= 4.0.0-*",
+      "Kekiri.IoC.Autofac >= 4.0.0-*",
+      "Kekiri.TestRunner.NUnit >= 1.0.0-*"
     ],
-    ".NETFramework,Version=v4.5.2": [
-      "Autofac >= 2.6.3.862"
-    ],
+    ".NETFramework,Version=v4.5.2": [],
     ".NETStandard,Version=v1.5": [
-      "Autofac >= 4.0.0-rc1-*",
       "Microsoft.CSharp >= 4.0.0",
-      "NETStandard.Library >= 1.0.0-rc2-23811",
-      "System.Runtime.Loader >= 4.0.0-rc2-*"
+      "NETStandard.Library >= 1.0.0-rc2-23811"
     ]
   }
 }
