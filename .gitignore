@@ -6,6 +6,7 @@ Packages
 _ReSharper.*
 *crunch*
 *.iml
+project.lock.json
 
 *.user
 *.suo
