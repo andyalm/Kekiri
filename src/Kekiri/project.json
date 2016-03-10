@@ -16,15 +16,14 @@
   ],
   "frameworks": {
     "net452": {},
-    "netcore50": {
+    "netstandard1.5": {
+      "imports": [
+          "dotnet5.6"
+      ],
       "dependencies": {
-        "Microsoft.CSharp": "4.0.0",
-        "System.Runtime": "4.0.20",
-        "System.Linq": "4.0.0",
-        "System.Text.RegularExpressions": "4.0.10",
-        "System.IO.FileSystem": "4.0.0",
+        "NETStandard.Library": "1.0.0-rc2-23811",
         "System.Dynamic.Runtime": "4.0.10",
-        "System.Reflection": "4.0.10"
+        "Microsoft.CSharp": "4.0.0"
       }
     }
   }

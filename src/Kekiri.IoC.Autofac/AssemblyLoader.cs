@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Runtime.Loader;
 using System.IO;
 
 namespace Kekiri.IoC.Autofac
@@ -7,9 +8,7 @@ namespace Kekiri.IoC.Autofac
     {
         public static Assembly LoadFromFile(string path)
         {
-            var bytes = File.ReadAllBytes(path);
-            
-            return Assembly.Load(bytes);
+            return AssemblyLoadContext.Default.LoadFromAssemblyPath(path);
         }
     }
 }

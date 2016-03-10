@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ca78d68-81df-4ee4-9472-3a0196bbd056" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Config/SeperatorType.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Config/Settings.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Config/TokenType.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/ConstructorNotFound.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/ContainerFactoryNotInitialized.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/ExpectedExceptionNotCaught.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/FixtureShouldHaveThens.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/FixtureShouldHaveWhens.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/GivenFailed.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/NoExceptionThrown.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/ScenarioException.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/ThenFailed.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/WhenFailed.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Exceptions/WrongExceptionType.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/IStepInvoker.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/ReflectionExtensions.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Reporting/IReportTarget.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/Reporting/ScenarioReportingContext.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/ScenarioRunner.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/ScenarioTestMetadata.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/StepClassInvoker.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/StepMethodInvoker.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/StepName.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Impl/StepType.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/IoC/Container.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Kekiri.csproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Kekiri.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Properties/AssemblyInfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/ScenarioBase.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/Step.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Library/TestRunner/IExampleAttribute.cs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Kekiri.sln" afterPath="$PROJECT_DIR$/Kekiri.sln" />
-    </list>
+    <list default="true" id="2ca78d68-81df-4ee4-9472-3a0196bbd056" name="Default" comment="" />
     <ignored path="Kekiri.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +44,8 @@
       <file leaf-file-name="AutofacBootstrapper.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Kekiri.IoC.Autofac/AutofacBootstrapper.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="340">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -87,8 +54,8 @@
       <file leaf-file-name="AutofacContainer.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Kekiri.IoC.Autofac/AutofacContainer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="238">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -368,16 +335,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kekiri.IoC.Autofac/AutofacBootstrapper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kekiri.IoC.Autofac/AutofacContainer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="238">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding />
         </state>
       </provider>
